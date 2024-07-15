@@ -1,0 +1,26 @@
+/* FOOTER */
+.footer {
+  top: 100%;
+  position: absolute;
+  width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer_main_div {
+    padding-top: 5rem;
+}
+
+.footer_main_div a {
+    color: #000;
+    font-family: var(--content-font-family);
+    font-size: 1.2em;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 1.2rem;
+}
+
+.footer_main_div a:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+}

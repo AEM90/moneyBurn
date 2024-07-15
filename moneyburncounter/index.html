@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Burned Money Counter</title>
+
+<link href="styles/navbar.css" rel="stylesheet" />
+<link href="styles/fonts.css" rel="stylesheet" />
+<link href="styles/footer.css" rel="stylesheet" />
+<link href="styles/main.css" rel="stylesheet" />
+<link href="styles/thispage.css" rel="stylesheet" />
+ 
+ <link rel="icon" type="image/x-icon" href="data/favicon/favicon.ico">
+ <script src="js/script.js"></script>
+</head>
+<body>
+<!-- base url: wischmontag.babathings.com -->
+  <nav class="navbar">
+    <div class="container">
+
+      <div class="logo">
+        <a href="/index.html" onmouseover="setColor()">Burned Money Counter</a>
+      </div>
+
+      <a class="toggle-button" onclick="toggleMenu()">☰</a>
+    </div>
+  </nav>
+
+  <div class="dropdown-menu" id="navbar-links">
+    <ul>
+      <li onclick="reset()"><a onmouseover="setColor()">Reset</a></li>
+      <li onclick="toggle('participants')"><a onmouseover="setColor()">Teilnehmer</a></li>
+      <li><a id="savebtn" onmouseover="setColor()">Save Session</a></li>
+
+      <li><input type="file" id="fileInput" accept=".csv">
+        <button onmouseover="setColor()" id="updateButton">Update and Download CSV</button></li>  
+    </ul>
+  </div>
+
+<section id="participants">
+<div style="text-align:center;"> 
+  <div onmouseover="setColor()" >
+    <table>
+    <thead>
+        <tr>
+            <th>Participants</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>VW (Tarif)</td>
+          <td class="counter">
+            <button id="decrement_vw" onclick="decrement('count_vw')">-</button>
+              <input class="teilnehmer" id="count_vw" type="number" placeholder="0">
+            <button id="increment_vw" onclick="increment('count_vw')">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Deloitte</td>
+          <td class="counter">
+            <button id="decrement_del" onclick="decrement('count_del')">-</button>
+              <input class="teilnehmer" id="count_del" type="number" placeholder="0">
+            <button id="increment_del" onclick="increment('count_del')">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Diconium</td>
+          <td class="counter">
+            <button id="decrement_dico" onclick="decrement('count_dico')">-</button>
+              <input class="teilnehmer" id="count_dico" type="number" placeholder="0">
+            <button id="increment_dico" onclick="increment('count_dico')">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td>MHP</td>
+          <td class="counter">
+            <button id="decrement_mhp" onclick="decrement('count_mhp')">-</button>
+              <input class="teilnehmer" id="count_mhp" type="number" placeholder="0">
+            <button id="increment_mhp" onclick="increment('count_mhp')">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Wann begann der Termin?</td>
+          <td><input type="time" name="t_start" id="t_start"></td>
+        </tr>
+      </tbody>
+    </table>
+</div>  
+  <div class="button-container"><button id="startbtn" onmouseover="setColor();" onclick="main();toggle('participants');setFocus();">Start</button></div>
+</div>  
+</section>
+
+
+<section>
+   <div class="content-container">
+    <div id="moneyCounter" class="money-amount"></div>
+  </div>   
+</section>
+<section class="monosection">
+   <div class="entry-content" id="moneyGif" style="display:none">
+      <iframe id="moneyFrame" src="#" frameBorder="0" class="giphy-embed myGif" allowFullScreen>
+        Your Browser does not Support iFrames!
+      </iframe>
+</section>
+
+<section>
+
+<footer class="footer">
+    <hr>
+    <div class="footer_main_div">
+        <a onmouseover="setColor()" href="https://imprint.babathings.com/">Impressum</a>
+        <!--<p>This page has been visited <span id="visitCount">0</span> times.</p>-->
+    </div>
+</footer>
+</section>
+
+  <!--<script src="../pageCounter/counter.js"></script>-->
+  <script src="js/moneyBurn.js"></script>
+</body>
+</html>

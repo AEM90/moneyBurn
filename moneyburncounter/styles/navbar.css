@@ -1,0 +1,84 @@
+
+.navbar {
+    background-color: #FFF;
+    padding: 20px 20px 20px 0;
+    width: 92%;
+    margin: 0 auto;
+    white-space: nowrap;
+    border: 3px solid black;
+    position: relative;
+}
+
+.logo {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: #000;
+    background-color: var(--hover-color);
+    padding: 1rem;
+    margin-left: -1rem;
+}
+
+.toggle-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    background-color: white;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu ul li {
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding: 1rem;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #000; /* Bright cyan color - adjust as needed */
+    background-color: var(--hover-color);
+}
+
+/* hängt zusammen */
+.dropdown-menu.active {
+    display: block;
+}
+.active{
+    width: 301px;
+    position: absolute;
+    right: 7%;
+    margin-top: 3%;
+    border: 3px solid black;
+    z-index: 1000;
+}
